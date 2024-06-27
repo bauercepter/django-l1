@@ -16,11 +16,12 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from . import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", views.homepage),
     path("about/", views.about),
+    path("posts/", include("posts.urls")),     # telling the main urls files about the url file in the posts app by using INCLUDE
 ]

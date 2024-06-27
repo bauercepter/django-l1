@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "posts",
 ]
 
 MIDDLEWARE = [
@@ -56,7 +57,7 @@ ROOT_URLCONF = "learn1.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": ["./templates"],    # adding template dir
+        "DIRS": ["./templates"],  # adding template dir
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -122,8 +123,8 @@ STATIC_URL = "static/"
 
 # * adding dir for static files
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-    ]
+    os.path.join(BASE_DIR, "static"),
+]
 
 
 # Default primary key field type

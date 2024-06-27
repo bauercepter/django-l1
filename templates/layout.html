@@ -1,0 +1,26 @@
+{% comment %} contains the skeleton / template for every html page {% endcomment %}
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+            Django App  <!--A default generic page title-->
+        {% endblock title %}
+    </title>
+    <link rel="stylesheet" href="{% static "./css/style.css" %}">
+</head>
+<body>
+    <nav>
+        <a href="/">🏠</a> |
+        <a href="/about">🐤</a> |
+        <a href="/posts">🗞️</a> |
+    </nav>
+    <main>
+        {% block content %}{% endblock content %}
+    </main>
+</body>
+<script src="{% static "js/main.js" %}"></script>
+</html>
