@@ -3,8 +3,15 @@
 from django.urls import path
 from . import views
 
+app_name = "posts"
+
 urlpatterns = [
-    path('', views.posts_list)          # views functions are added as higher-order functions
+    path(
+        "", views.posts_list, name="list"
+    ),  # views functions are added as higher-order functions
+    path(
+        "<slug:slug>", views.post_page, name="page"
+    ),  # using slug path converter and the pattern is -> pathConverter:slug where both are named slug in this case
 ]
 
 
